@@ -2,24 +2,21 @@
 
 namespace Pagup\Lktags\Controllers;
 
-use  Pagup\Lktags\Core\Option ;
-use  Pagup\Lktags\Core\Plugin ;
-use  Pagup\Lktags\Core\Request ;
-class SettingsController
-{
-    public function add_settings()
-    {
+use Pagup\Lktags\Core\Option;
+use Pagup\Lktags\Core\Plugin;
+use Pagup\Lktags\Core\Request;
+class SettingsController {
+    public function add_settings() {
         add_options_page(
             'Linkedin Insight Tags Settings',
             'Linkedin Insight Tag',
             'manage_options',
             'lktags',
-            array( &$this, 'page' )
+            array(&$this, 'page')
         );
     }
-    
-    public function page()
-    {
+
+    public function page() {
         $safe = [
             "lktags_event_yes",
             "lktags_event_no",
@@ -35,7 +32,6 @@ class SettingsController
             "lktags_remove_settings"
         ];
         $success = '';
-        
         if ( isset( $_POST['update'] ) ) {
             if ( function_exists( 'current_user_can' ) && !current_user_can( 'manage_options' ) ) {
                 die( 'Sorry, not allowed...' );
@@ -57,13 +53,12 @@ class SettingsController
             ];
             update_option( 'lktags', $options );
             // update options
-            echo  '<div class="notice lktags-notice notice-success is-dismissible"><p><strong>' . esc_html__( 'Settings saved.' ) . '</strong></p></div>' ;
+            echo '<div class="notice lktags-notice notice-success is-dismissible"><p><strong>' . esc_html__( 'Settings saved.' ) . '</strong></p></div>';
         }
-        
         $options = new Option();
         $text_domain = Plugin::domain();
         $notification = new \Pagup\Lktags\Controllers\NotificationController();
-        echo  $notification->support() ;
+        echo $notification->support();
         //set active class for navigation tabs
         $active_tab = ( isset( $_GET['tab'] ) && in_array( $_GET['tab'], $safe ) ? sanitize_key( $_GET['tab'] ) : 'lktags-settings' );
         //Plugin::dd($_POST);
@@ -72,9 +67,9 @@ class SettingsController
         $purchase_url = "options-general.php?page=lktags-pricing";
         $get_pro = sprintf( wp_kses( __( '<a href="%s">Get Pro version</a> to enable', $text_domain ), array(
             'a' => array(
-            'href'   => array(),
-            'target' => array(),
-        ),
+                'href'   => array(),
+                'target' => array(),
+            ),
         ) ), esc_url( $purchase_url ) );
         // Return Views
         if ( $active_tab == 'lktags-settings' ) {
@@ -92,4 +87,5 @@ class SettingsController
     }
 
 }
+
 $settings = new SettingsController();

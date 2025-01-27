@@ -3,8 +3,8 @@ Contributors: the-rock, pagup, freemius
 Tags: Linkedin insight tag, linkedin advertising, Linkedin ads, Linkedin tag, Linkedin Woocommerce
 Requires at least: 4.1
 Requires PHP: 5.6
-Tested up to: 6.6
-Stable tag: 1.2.6
+Tested up to: 6.7
+Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -128,3 +128,6 @@ Note: once the codes are added, make sure to clear your cache. Then, you must ad
 
 = 1.2.6 =
 * 🐛 FIX: Security fix
+
+= 1.2.7 =
+* 🐛 FIX: Freemius SDK Security fix
