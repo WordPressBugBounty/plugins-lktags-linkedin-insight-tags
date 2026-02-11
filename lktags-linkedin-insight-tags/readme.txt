@@ -3,7 +3,7 @@ Contributors: the-rock, pagup, freemius
 Tags: Linkedin insight tag, linkedin advertising, Linkedin ads, Linkedin tag, Linkedin Woocommerce
 Requires at least: 4.1
 Requires PHP: 5.6
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 1.2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
