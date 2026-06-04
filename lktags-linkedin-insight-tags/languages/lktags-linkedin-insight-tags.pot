@@ -492,3 +492,59 @@ msgstr ""
 #: lktags-linkedin-insight-tags-admin.php:444
 msgid "Yes"
 msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "LinkedIn traffic is measurable. Is your B2B site AI-ready?"
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "You installed the LinkedIn Insight Tag to measure B2B visitors. Now check whether your robots.txt, sitemap, and AI crawler rules are clear enough for modern discovery systems."
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "Read the AI visibility guide"
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "Run the free AI crawl audit"
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "Need conversion tracking on WooCommerce?"
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "The premium version adds LinkedIn Insight Tag support for WooCommerce product, cart, and checkout pages, plus custom event placement through the page metabox."
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "View Pro options"
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "How to verify the tag"
+msgstr ""
+
+#: admin/views/inc/side.view.php
+msgid "After saving your Partner ID, clear your cache and verify the domain in LinkedIn Campaign Manager. LinkedIn may need real traffic before showing the tag as active."
+msgstr ""
+
+#: admin/views/settings.view.php
+msgid "Check B2B crawler and AI readiness"
+msgstr ""
+
+#: admin/views/settings.view.php
+msgid "Review robots.txt, sitemap, and AI crawler rules for your B2B site"
+msgstr ""
+
+#: admin/views/settings.view.php
+msgid "Review your <a href=\"%1$s\" target=\"_blank\">B2B AI visibility guide</a>, or run the <a href=\"%2$s\" target=\"_blank\">free crawl audit</a>."
+msgstr ""
+
+#: admin/views/metabox.view.php
+msgid "Enter event code here"
+msgstr ""
+
+#: admin/views/settings.view.php
+msgid "Improve image alt text coverage"
+msgstr ""

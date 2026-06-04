@@ -6,6 +6,49 @@ use Pagup\Lktags\Core\Option;
 use Pagup\Lktags\Core\Plugin;
 use Pagup\Lktags\Core\Request;
 class SettingsController {
+    private $partner_id_error = '';
+
+    private function extract_partner_id( $raw_input ) {
+        $raw_input = (string) $raw_input;
+        $decoded_input = html_entity_decode( $raw_input, ENT_QUOTES, 'UTF-8' );
+
+        if ( preg_match( '/^\s*(\d+)\s*$/', $decoded_input, $matches ) ) {
+            return $matches[1];
+        }
+
+        if ( preg_match( '/_linkedin_partner_id\s*=\s*[\'"]?(\d+)[\'"]?/i', $decoded_input, $matches ) ) {
+            return $matches[1];
+        }
+
+        if ( preg_match( '/[?&]pid=(\d+)/i', $decoded_input, $matches ) ) {
+            return $matches[1];
+        }
+
+        return '';
+    }
+
+    private function sanitize_partner_id() {
+        if ( !isset( $_POST['lktags_id'] ) ) {
+            return '';
+        }
+
+        $raw_input = wp_unslash( $_POST['lktags_id'] );
+
+        if ( '' === trim( (string) $raw_input ) ) {
+            return '';
+        }
+
+        $partner_id = $this->extract_partner_id( $raw_input );
+
+        if ( '' !== $partner_id ) {
+            return $partner_id;
+        }
+
+        $this->partner_id_error = __( 'The LinkedIn Partner ID could not be extracted. Other settings were saved, but the previous Partner ID was kept. Enter only the numeric Partner ID or paste the official LinkedIn Insight Tag code.', Plugin::domain() );
+
+        return Option::check( 'lktags_id' ) ? Option::get( 'lktags_id' ) : '';
+    }
+
     public function add_settings() {
         add_options_page(
             'Linkedin Insight Tags Settings',
@@ -42,7 +85,7 @@ class SettingsController {
             }
             $options = [
                 'enable_lktags'          => Request::post( 'enable_lktags', $safe ),
-                'lktags_id'              => ( Request::check( 'lktags_id' ) ? sanitize_text_field( $_POST['lktags_id'] ) : '' ),
+                'lktags_id'              => $this->sanitize_partner_id(),
                 'lktags_woo'             => Request::post( 'lktags_woo', $safe ),
                 'lktags_remove_settings' => Request::post( 'lktags_remove_settings', $safe ),
                 'boost-robot'            => Request::post( 'boost-robot', $safe ),
@@ -54,6 +97,9 @@ class SettingsController {
             update_option( 'lktags', $options );
             // update options
             echo '<div class="notice lktags-notice notice-success is-dismissible"><p><strong>' . esc_html__( 'Settings saved.' ) . '</strong></p></div>';
+            if ( '' !== $this->partner_id_error ) {
+                echo '<div class="notice lktags-notice notice-warning is-dismissible"><p><strong>' . esc_html( $this->partner_id_error ) . '</strong></p></div>';
+            }
         }
         $options = new Option();
         $text_domain = Plugin::domain();

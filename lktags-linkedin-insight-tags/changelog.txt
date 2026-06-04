@@ -1,0 +1,87 @@
+Lktags - Linkedin Insight Tags changelog
+
+= 1.2.8 =
+* Improve Partner ID handling when users paste a numeric ID or the full LinkedIn Insight Tag code.
+* Improve frontend output escaping for the base LinkedIn Insight Tag.
+* Scope admin assets to the plugin settings page only.
+* Remove unnecessary external font loading from the WordPress admin.
+* Remove legacy cross-promotion from the Freemius opt-in message.
+* Clarify WooCommerce coverage between Free and Premium.
+* Refresh admin copy and styling for a cleaner B2B tracking setup experience.
+* Add a premium local Tag Health and B2B Readiness diagnostic panel.
+* Add a locked Tag Health and B2B Readiness teaser in the free version.
+* Add premium WooCommerce conversion ID fields for product, cart, checkout, and purchase confirmation steps.
+* Clarify that WooCommerce conversion IDs are separate from the base LinkedIn Partner ID and should normally be distinct per WooCommerce step.
+* Improve WooCommerce conversion ID handling by extracting `conversion_id` from pasted LinkedIn event snippets instead of concatenating all digits.
+* Fire configured WooCommerce conversion IDs through the LinkedIn Insight Tag queue.
+* Add readme guidance for product view, cart, checkout, and purchase confirmation conversion IDs.
+* Clarify Better Robots.txt and AI visibility messaging without making ranking or citation claims.
+
+= 1.2.7 =
+* Freemius SDK security fix.
+
+= 1.2.6 =
+* Security fix.
+
+= 1.2.5 =
+* Security fix nonce.
+* Updated Freemius to latest v2.5.3.
+
+= 1.2.4 =
+* Security issue fix.
+
+= 1.2.3 =
+* Improved notifications for opt-in. Tested with WordPress 5.9.
+
+= 1.2.2 =
+* Fixed tracking issue on cart and checkout.
+
+= 1.2.1 =
+* Added Meta Tags for SEO promotion.
+
+= 1.2.0 =
+* Updated Freemius to v2.4.2.
+* Tested up to WordPress 5.7.
+* Refactored structure and organized code.
+
+= 1.1.9.1 =
+* Updated Freemius to v2.4.1.
+* Tested up to WordPress 5.6.
+* Fixed PHP warning for undefined variables.
+
+= 1.1.9 =
+* Added security for tab POST requests.
+* Added WP Google Street View promotion in sidebar.
+* Updated Freemius.
+
+= 1.1.8 =
+* Minor changes.
+
+= 1.1.7 =
+* Added affiliate program.
+
+= 1.1.6 =
+* Changed text domain to fix translation issue in WordPress repository log.
+
+= 1.1.5 =
+* Added VidSEO recommendation.
+
+= 1.1.4 =
+* Updated Freemius SDK v2.3.0.
+* Fixed get_blog_list() fatal error.
+* Updated translations.
+* Added security for checkbox POST requests.
+
+= 1.1.2 =
+* Disabled notification for 4 months.
+* Removed recommendations from plugin settings.
+* Minor changes.
+
+= 1.1.1 =
+* Fixed base code issue when WooCommerce is not active.
+
+= 1.1.0 =
+* Fixed fatal error when WooCommerce is not active.
+
+= 1.0.0 =
+* Initial release.

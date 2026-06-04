@@ -2,9 +2,12 @@
 
 /*
 * Plugin Name: Lktags - Linkedin Insight Tags
-* Description: The linkedin conversion Tracking plugin allows to add strategically your linkedin TAG ID on all your webpages (with the base code). No need to edit your theme files!
+* Description: Add the LinkedIn Insight Tag to WordPress without editing theme files. Paste your Partner ID, enable the tag, and keep your B2B tracking setup simple.
 * Author: Pagup
-* Version: 1.2.7
+* Version: 1.2.8
+* Requires at least: 4.1
+* Requires PHP: 5.6
+* Tested up to: 7.0
 * Author URI: https://pagup.com/
 * Text Domain: lktags-linkedin-insight-tags
 * Domain Path: /languages/
@@ -79,7 +82,6 @@ if ( function_exists( 'lktags_fs' ) ) {
 
         lktags_fs()->add_filter( 'plugin_icon', 'lktags_fs_custom_icon' );
         // freemius opt-in
-        // freemius opt-in
         function lktags_fs_custom_connect_message(
             $message,
             $user_first_name,
@@ -89,8 +91,7 @@ if ( function_exists( 'lktags_fs' ) ) {
             $freemius_link
         ) {
             $break = "<br><br>";
-            $more_plugins = '<p><a target="_blank" href="https://wordpress.org/plugins/meta-tags-for-seo/">Meta Tags for SEO</a>, <a target="_blank" href="https://wordpress.org/plugins/automatic-internal-links-for-seo/">Auto internal links for SEO</a>, <a target="_blank" href="https://wordpress.org/plugins/bulk-image-alt-text-with-yoast/">Bulk auto image Alt Text</a>, <a target="_blank" href="https://wordpress.org/plugins/bulk-image-title-attribute/">Bulk auto image Title Tag</a>, <a target="_blank" href="https://wordpress.org/plugins/mobilook/">Mobile view</a>, <a target="_blank" href="https://wordpress.org/plugins/better-robots-txt/">Wordpress Better-Robots.txt</a>, <a target="_blank" href="https://wordpress.org/plugins/wp-google-street-view/">Wp Google Street View</a>, <a target="_blank" href="https://wordpress.org/plugins/vidseo/">VidSeo</a>, ...</p>';
-            return sprintf( esc_html__( 'Hey %1$s, %2$s Click on Allow & Continue to activate Linkedin Insight Tag on your website :)! The Linkedin tag (with base & event codes) allows you to track actions people take on your website. %2$s Never miss an important update -- opt-in to our security and feature updates notifications. %2$s See you on the other side.', 'lktags-linkedin-insight-tags' ), $user_first_name, $break ) . $more_plugins;
+            return sprintf( esc_html__( 'Hey %1$s, %2$s Opt in to receive security and feature updates for Lktags - Linkedin Insight Tags. The plugin helps you add the LinkedIn Insight Tag to WordPress without editing theme files. You can skip this step if you prefer.', 'lktags-linkedin-insight-tags' ), $user_first_name, $break );
         }
 
         lktags_fs()->add_filter(

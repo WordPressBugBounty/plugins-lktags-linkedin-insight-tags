@@ -1,133 +1,164 @@
-=== Add Linkedin insight tags for Linkedin ads ===
+=== Add LinkedIn Insight Tag for LinkedIn Ads ===
 Contributors: the-rock, pagup, freemius
-Tags: Linkedin insight tag, linkedin advertising, Linkedin ads, Linkedin tag, Linkedin Woocommerce
+Tags: linkedin insight tag, linkedin advertising, linkedin ads, linkedin tag, linkedin conversion tracking
 Requires at least: 4.1
 Requires PHP: 5.6
-Tested up to: 6.9
-Stable tag: 1.2.7
+Tested up to: 7.0
+Stable tag: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-The Linkedin Insight tag plugin allows to add strategically your Insight tag on all your webpages. No need to edit your theme files anymore!
+Add the LinkedIn Insight Tag to WordPress without editing theme files. Paste your Partner ID, enable the tag, and keep your B2B tracking setup simple.
 
 == Description ==
 
-**EASILY INSERT YOUR LINKEDIN INSIGHT TAG (Linkedin Data Partner ID ) & CREATE EVENTS FOR CONVERSION TRACKING.**
+Add LinkedIn Insight Tag to your WordPress site without editing your theme, touching header files, or copying JavaScript manually.
 
-The Linkedin Insight tag plugin allows to add strategically your Insight tag on all your webpages. No need to edit your theme files anymore!
+This plugin is built for B2B site owners, marketers, consultants, agencies, and small teams that want a simple WordPress interface for the LinkedIn Insight Tag. Paste your Partner ID, enable the tag, save, then verify the result in LinkedIn Campaign Manager.
 
-The simple interface of the Linkedin insight tag plugin gives you one place where you can insert your Linkedin Data Partner ID .
+The LinkedIn Insight Tag helps you measure website activity from LinkedIn campaigns, support conversion tracking, and build matched audiences in LinkedIn Campaign Manager. This plugin does not replace LinkedIn Campaign Manager. It gives you a focused WordPress interface for placing the tag safely and predictably.
 
-You will be able to measure the following types of events:
+= Free version =
 
-*   Download
-*   Install
-*   Lead
-*   ...
+The free version focuses on the base LinkedIn Insight Tag setup:
 
-**PREMIUM FEATURES**
+* Add your LinkedIn Partner ID from the WordPress admin.
+* Inject the base LinkedIn Insight Tag without editing your theme.
+* Keep the setup in one WordPress settings screen.
+* Accept a numeric Partner ID directly.
+* Help extract the Partner ID if you paste the full LinkedIn Insight Tag code.
+* Preserve settings unless you choose to remove them on deactivation.
 
-The Linkedin insight tag plugin allows you to create EVENTS (pixel) on specific pages thanks to our Post META BOX feature available on each page.
+The free version injects the base tag on regular public pages. WooCommerce product, cart, and checkout coverage is available in Premium.
 
-Linkedin insight tag PRO plugin will alllow you to add your INSIGHT TAG on all WooCommerce pages so that you can track conversion for your products.
+= Premium features =
 
-You will be able to measure the following types of events:
+The premium version is connected through Freemius and focuses on WooCommerce conversion ID support, custom conversion event placement, and local setup diagnostics.
 
-*   Add to cart.
-*   Checkout
-*   Purchase.
-*   ...
+Premium features include:
 
-And even Custom events with our Post META BOX feature.
+* LinkedIn Tag Health and B2B Readiness panel in the plugin settings.
+* Local checks for Partner ID, base tag activation, WooCommerce coverage, custom event placement, and WordPress visibility.
+* LinkedIn Insight Tag support on WooCommerce product, cart, checkout, and purchase confirmation pages.
+* Optional LinkedIn conversion ID fields for WooCommerce product view, cart, checkout, and purchase confirmation steps.
+* Custom LinkedIn event code placement through a post, page, or product metabox.
+* Access to premium updates and licensing through Freemius.
 
-Note: once the codes are added, make sure to clear your cache. Then, you must add the domain for approval. To do this, go to the Insight Tag page, and on the right side, you must add your domain. WWW is not required. Once users enter your website, the tag will recognize and start running. At this point, you will see that LinkedIn has confirmed your domain..
+Before upgrading, review the plan shown in the Freemius checkout. Premium availability, licensing, trial terms, renewals, and account management are handled through Freemius.
 
-**WITH LINKEDIN INSIGHT TAG, YOU CAN:**.
+= B2B and machine-readable site readiness =
 
-*   **Track the metrics that matter most**: Easily track website conversions from your LinkedIn programs in your Campaign Manager analytics. At a glance, understand your LinkedIn advertising ROI, conversion count, cost-per-conversion, conversion rate, and more. You can even track which audience segments are driving the most conversions.
-*   **Record every conversion, every time**: Track conversions from desktop and mobile, whether members converted after clicking on -- or even after just viewing -- one of your ads. 
-*   **Optimize your campaigns to drive even better performance**: Monitor the specific campaigns, ads, and the nature of the audiences that are driving conversions. Use this information to improve your Sponsored Content and Text Ads targeting, creative, and offers to maximize the  downstream impact to your lead and opportunity pipeline goals.
+Many users install the LinkedIn Insight Tag because their B2B website needs to be measurable. Measurement is one layer. Your site should also be technically clear for search engines and modern crawlers.
+
+After installing your LinkedIn Insight Tag, you can also review your robots.txt, sitemap, and AI crawler rules with Better Robots.txt or run a free audit on better-robots.com.
+
+This plugin does not promise AI rankings or AI citations. It helps with LinkedIn tracking setup. Better Robots.txt and the audit are separate tools for checking the machine-readable layer of your WordPress site.
+
+= What this plugin does not do =
+
+This plugin does not:
+
+* Create or manage LinkedIn campaigns.
+* Replace LinkedIn Campaign Manager.
+* Guarantee that LinkedIn will immediately mark the tag as active.
+* Manage cookie consent or legal compliance for you.
+* Promise better rankings, AI citations, or ad performance.
+
+You remain responsible for LinkedIn campaign setup, conversion rules, privacy notices, cookie consent, and legal compliance for your jurisdiction and audience.
 
 == Installation ==
 
-= Installing manually =
+1. Install and activate `Lktags - Linkedin Insight Tags`.
+2. Go to `Settings > Linkedin Insight Tag`.
+3. Paste your LinkedIn Partner ID.
+4. Enable the tag and save.
+5. Clear your site cache.
+6. Verify the tag in LinkedIn Campaign Manager.
 
-1. Unzip all files to the `/wp-content/plugins/lktags-linkedin-insight-tags` directory
-2. Log into WordPress admin and activate the 'Lktags - Linkedin Insight Tags' plugin through the 'Plugins' menu
-3. Go to "Settings > Lktags - Linkedin Insight Tags" in the left-hand menu to start work on it.
+== Frequently Asked Questions ==
 
+= Where do I find my LinkedIn Partner ID? =
+
+Open LinkedIn Campaign Manager, go to Account Assets, then Insight Tag. Your Partner ID is the numeric ID used by the LinkedIn Insight Tag.
+
+= Can I paste the full LinkedIn Insight Tag code? =
+
+The plugin is designed for the numeric Partner ID. If you paste the full LinkedIn Insight Tag code, version 1.2.8 tries to extract the Partner ID from the script. You should still verify the saved ID before enabling the tag.
+
+= Do I need to edit my theme files? =
+
+No. The plugin is designed to avoid manual theme editing.
+
+= Does the plugin create my LinkedIn campaigns? =
+
+No. Campaigns, audiences, and conversion rules are managed in LinkedIn Campaign Manager.
+
+= Does the plugin validate my tag inside LinkedIn Campaign Manager? =
+
+No. The plugin can check local WordPress-side setup details, especially in the premium version, but LinkedIn Campaign Manager is still the authority for confirming tag activity.
+
+= Why does LinkedIn not show the tag as active immediately? =
+
+LinkedIn may need real site traffic before confirming that the tag is active. Clear cache layers and verify the status in Campaign Manager.
+
+= Does this plugin handle cookie consent? =
+
+No. You remain responsible for consent, privacy notices, and compliance requirements for your jurisdiction and audience.
+
+= Does the free version support WooCommerce conversion tracking? =
+
+The free version focuses on the base LinkedIn Insight Tag on regular public pages. WooCommerce product, cart, checkout, purchase confirmation, and conversion ID support is part of the premium version.
+
+= What does the premium Tag Health and B2B Readiness panel check? =
+
+The premium panel performs local WordPress-side checks for Partner ID, base tag activation, WooCommerce coverage, WooCommerce conversion IDs, custom event placement, and WordPress visibility. It does not perform external LinkedIn Campaign Manager validation.
+
+= Does Premium create LinkedIn conversion IDs for WooCommerce automatically? =
+
+No. Create each conversion action in LinkedIn Campaign Manager, then paste the matching numeric conversion ID into the plugin. These are not your base Partner ID. If you paste an event snippet, version 1.2.8 tries to extract the `conversion_id` value. If no reliable conversion ID is found, the previous value is kept. If you only track purchases, fill only the purchase field. If you use several WooCommerce steps, each step should normally use its own LinkedIn conversion ID so reporting stays clear.
+
+= Do I need a different conversion ID for each WooCommerce step? =
+
+Usually, yes. A product view, cart visit, checkout start, and purchase confirmation are different conversion actions. You can leave unused fields empty. Reusing the same conversion ID in several fields is technically possible, but it will report those steps as the same LinkedIn conversion.
+
+= Can I add a custom LinkedIn event to a specific page? =
+
+The premium version includes a metabox for custom LinkedIn event code placement on posts, pages, or products. This is intended for conversion tracking scenarios where a specific page needs an event code.
+
+= Does Better Robots.txt improve LinkedIn Ads tracking? =
+
+No. Better Robots.txt is a separate plugin for robots.txt and crawler-related configuration. It is offered as a next-step audit for B2B sites that want clearer machine-readable signals.
+
+= Does this plugin improve AI visibility? =
+
+No direct claim is made. This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governance should be evaluated separately through your site structure, robots.txt, sitemap, content, and machine-readable signals.
 
 == Screenshots ==
 
-1. Lktags - Linkedin Insight Tags Settings Page
-2. Lktags - Linkedin Insight Tags Settings Page
+1. LinkedIn Insight Tag settings page.
+2. Partner ID field and enable switch.
+3. Free version with premium Tag Health and B2B Readiness teaser.
+4. Premium Tag Health and B2B Readiness panel.
+5. Premium WooCommerce conversion ID fields and custom event options.
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release.
+= 1.2.8 =
+* Improve Partner ID handling when users paste a numeric ID or the full LinkedIn Insight Tag code.
+* Improve frontend output escaping for the base LinkedIn Insight Tag.
+* Scope admin assets to the plugin settings page only.
+* Remove unnecessary external font loading from the WordPress admin.
+* Remove legacy cross-promotion from the Freemius opt-in message.
+* Clarify WooCommerce coverage between Free and Premium.
+* Add a premium local Tag Health and B2B Readiness diagnostic panel.
+* Add a locked Tag Health and B2B Readiness teaser in the free version.
+* Add premium WooCommerce conversion ID fields for product, cart, checkout, and purchase confirmation steps.
+* Fire configured WooCommerce conversion IDs through the LinkedIn Insight Tag queue.
+* Clarify Better Robots.txt and AI visibility messaging without making ranking or citation claims.
 
-= 1.1.0 =
-* Fixed a fatal error causing issue when woocommerce is not active
+Older changelog entries are kept in `changelog.txt`.
 
-= 1.1.1 =
-* Fixed a bug causing base code issue when woocommerce is not active
+== Upgrade Notice ==
 
-= 1.1.2 =
-* Notification will be disabled for 4 months. 
-* Removed recommendations from plugin settings
-* Some other minor changes
-
-= 1.1.4 =
-* Updated Freemius SDK v2.3.0, Fixed get_blog_list () fatal error
-* Updated all translations
-* Added security for checkbox $_POST requests
-
-= 1.1.5 =
-* VidSEO Recommendation
-
-= 1.1.6 =
-* Changed textdomain to fix translation error in WordPress repo log.
-
-= 1.1.7 =
-* Added affiliate program
-
-= 1.1.8 =
-* Minor changes to fix some issues
-
-= 1.1.9 =
-* Added security for tab $_POST requests
-* WP Google Street View Promotion in sidebar
-* Updated Freemius to latest version
-
-= 1.1.9.1 =
-* Updated Freemius to latest v2.4.1
-* Tested up to WordPress v5.6
-* Fixed PHP Warning for Undefined Variables
-
-= 1.2.0 =
-* Updated Freemius to latest v2.4.2
-* Tested up to WordPress v5.7
-* Completely refactored with better structure and organized code
-
-= 1.2.1 =
-* 🔥 NEW: Meta Tags for SEO promotion
-
-= 1.2.2 =
-* 🐛 FIX: Tracking issue on cart and checkout
-
-= 1.2.3 =
-* 👌 IMPROVE: Notifications for opt-in. Tested with WP v5.9
-
-= 1.2.4 =
-* 🐛 FIX: Security issue
-
-= 1.2.5 =
-* 🐛 FIX: Security issue nonce
-* 👌 IMPROVE: Updated Freemius to latest v2.5.3
-
-= 1.2.6 =
-* 🐛 FIX: Security fix
-
-= 1.2.7 =
-* 🐛 FIX: Freemius SDK Security fix
+= 1.2.8 =
+Improves Partner ID handling, admin hygiene, setup guidance, and FREE/PRO positioning. Premium users also get a local Tag Health and B2B Readiness panel plus WooCommerce conversion ID fields.

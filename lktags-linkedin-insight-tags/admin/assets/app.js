@@ -18,8 +18,4 @@ jQuery(document).ready(function () {
         jQuery('.lktags-vidseo').slideToggle();
     });
 
-    jQuery("#fs_connect button[type=submit]").on("click", function(e) {
-        console.log("open verify window")
-        window.open('https://better-robots.com/subscribe.php?plugin=lktags','lktags','resizable,height=400,width=700');
-    });
 });

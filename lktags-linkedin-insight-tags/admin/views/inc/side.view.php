@@ -1,56 +1,30 @@
+<?php
+$ai_visibility_url = 'https://better-robots.com/linkedin-b2b-ai-visibility/';
+$ai_audit_url = 'https://better-robots.com/check';
+?>
+
 <div class="lktags-sidebar">
 
     <div class="box">
-        <h2><?php echo __( 'Boost your SEO with Meta Tags', 'better-robots-txt' ); ?></h2>
-        <p><?php echo __( 'Auto-populate custom SEO META Keywords everywhere on your website based on Post titles, Yoast/Rank Math Focus keywords, and more. Add custom META tags to help Search engines such as Google to understand additional information about the webpage (for ranking purposes).', $text_domain ); ?></p>
-        <p><a href="https://wordpress.org/plugins/meta-tags-for-seo/" target="_blank" class="lktags-btn"><?php echo __( 'Read More &raquo;', $text_domain ); ?></a></p>
+        <h2><?php echo esc_html__( 'LinkedIn traffic is measurable. Is your B2B site AI-ready?', $text_domain ); ?></h2>
+        <p><?php echo esc_html__( 'You installed the LinkedIn Insight Tag to measure B2B visitors. Now check whether your robots.txt, sitemap, and AI crawler rules are clear enough for modern discovery systems.', $text_domain ); ?></p>
+        <p>
+            <a href="<?php echo esc_url( $ai_visibility_url ); ?>" target="_blank" rel="noopener noreferrer" class="lktags-btn"><?php echo esc_html__( 'Read the AI visibility guide', $text_domain ); ?></a>
+        </p>
+        <p>
+            <a href="<?php echo esc_url( $ai_audit_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html__( 'Run the free AI crawl audit', $text_domain ); ?></a>
+        </p>
     </div>
 
     <div class="box">
-        <h2><?php echo __( 'Subscribe & get a 10% OFF', 'lktags' ); ?></h2>
-        <p><?php echo __( 'Enter your email to get our SEO best practice guide AND a 10% coupon code on Linkedin Insight Tag PRO plugin.', 'lktags' ); ?>
-        </p>
-        <!-- Begin MailChimp Signup Form -->
-
-        <form action="https://Pagup.us14.list-manage.com/subscribe/post?u=a706b8e968389b05725c65849&amp;id=59ebd61587"
-            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-            target="_blank" novalidate>
-
-            <input type="email" value="" name="EMAIL" class="lktags-field"
-                placeholder="<?php echo __( 'Email address', 'lktags' ); ?>" required>
-
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                    name="b_a706b8e968389b05725c65849_59ebd61587" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="<?php echo __( 'Subscribe', 'lktags' ); ?>" name="subscribe"
-                    id="mc-embedded-subscribe" class="lktags-btn"></div>
-
-        </form><br />
-        <!--End Mailchimp-->
-
+        <h2><?php echo esc_html__( 'Need conversion tracking on WooCommerce?', $text_domain ); ?></h2>
+        <p><?php echo esc_html__( 'The premium version adds WooCommerce product, cart, checkout, and purchase confirmation coverage, plus LinkedIn conversion ID fields and custom event placement through the page metabox.', $text_domain ); ?></p>
+        <p><a href="<?php echo esc_url( admin_url( 'options-general.php?page=lktags-pricing' ) ); ?>" class="lktags-btn"><?php echo esc_html__( 'View Pro options', $text_domain ); ?></a></p>
     </div>
 
     <div class="box">
-        <h2><?php echo __( 'BOOST YOUR RANKING', 'lktags' ); ?></h2>
-        <p><?php echo __( 'Optimize your Robots.txt with Better Robots.txt (made by PAGUP) & Boost your ranking on search engines.', 'lktags' ); ?>
-        </p>
-        <p><a href="https://wordpress.org/plugins/better-robots-txt/"
-                class="lktags-btn"><?php echo __( 'Try Better Robots.txt &raquo;', 'lktags' ); ?></a></p>
-    </div>
-
-    <div class="box">
-        <h2><?php echo __( 'Optimize your ALT TEXT', 'lktags' ); ?></h2>
-        <p><?php echo __( 'Auto optimize all image alt texts (including Woocommerce online store), of your pages, posts & product, from Yoast SEO optimization settings (keywords) and/or Post title.', 'lktags' ); ?>
-        </p>
-        <p><a href="https://wordpress.org/plugins/bulk-image-alt-text-with-yoast/" target="_blank"
-                class="lktags-btn"><?php echo __( 'Get BIALTY by Pagup &raquo;', 'lktags' ); ?></a></p>
-    </div>
-
-    <div class="box">
-        <h2><?php echo __( 'Boost your Local SEO', 'lktags' ); ?></h2>
-        <p><?php echo __( 'Embed Google Street View  (+ Virtual tour) with Google Maps (sync.) and Local SEO structured data. Try Wp Google Street View plugin with unique Local Business data Markup (machine-readable language of JSON-LD).', 'lktags' ); ?>
-        </p>
-        <p><a href="https://wordpress.org/plugins/wp-google-street-view/" target="_blank"
-                class="lktags-btn"><?php echo __( 'Get Wp Google Street View &raquo;', 'lktags' ); ?></a></p>
+        <h2><?php echo esc_html__( 'How to verify the tag', $text_domain ); ?></h2>
+        <p><?php echo esc_html__( 'After saving your Partner ID, clear your cache and verify the domain in LinkedIn Campaign Manager. LinkedIn may need real traffic before showing the tag as active.', $text_domain ); ?></p>
     </div>
 
 </div>

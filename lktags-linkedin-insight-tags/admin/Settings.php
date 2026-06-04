@@ -35,9 +35,12 @@ class Settings {
         return $links;
     }
 
-    public function assets() {
+    public function assets( $hook ) {
 
-        Asset::style_remote('lktags_font', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+        if ( 'settings_page_lktags' !== $hook ) {
+            return;
+        }
+
         Asset::style('lktags_styles', 'app.css');
         Asset::script('lktags_script', 'app.js');
     

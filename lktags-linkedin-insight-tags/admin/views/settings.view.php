@@ -35,7 +35,7 @@ echo sprintf( wp_kses( __( 'LinkedIn Insight tag (or pixel) allows you to measur
                     <div class="lktags-segment">
 
                         <h2><?php 
-echo esc_html__( 'LINKEDIN INSIGHT TAGS', $text_domain );
+echo esc_html__( 'LinkedIn Insight Tags', $text_domain );
 ?></h2>
 
                         <div class="lktags-row">
@@ -58,7 +58,7 @@ if ( $options::check( 'enable_lktags' ) ) {
                                 </label>
                                 &nbsp;
                                 <span><?php 
-echo esc_html__( 'This feature will add the Linkedin base code to all pages', $text_domain );
+echo esc_html__( 'This feature adds the LinkedIn base code to regular public pages. WooCommerce product, cart, and checkout coverage is handled by the Premium option.', $text_domain );
 ?></span>
                             </div>
 
@@ -82,7 +82,7 @@ echo __( 'Please refer to FAQ section : How to find your TAG ID - Please do NOT 
                             <div class="lktags-column col-8">
                                 <input type="text" name="lktags_id" id="lktags_id" class="lktags-field" value="<?php 
 if ( $options::check( 'lktags_id' ) ) {
-    echo $options::get( 'lktags_id' );
+    echo esc_attr( $options::get( 'lktags_id' ) );
 }
 ?>" placeholder="1234567890">
 
@@ -103,17 +103,69 @@ if ( $options::check( 'enable_lktags' ) && !$options::check( 'lktags_id' ) ) {
 
                     </div>
 
+                    <div class="lktags-segment lktags-readiness lktags-readiness-locked">
+
+                        <h2><?php echo esc_html__( 'LinkedIn Tag Health & B2B Readiness', $text_domain ); ?></h2>
+
+                        <p><?php echo esc_html__( 'Upgrade to Pro to unlock a local diagnostic for your LinkedIn setup: Partner ID, base tag activation, WooCommerce coverage, custom conversion events, and WordPress visibility.', $text_domain ); ?></p>
+
+                        <div class="lktags-readiness-summary">
+                            <?php echo esc_html__( 'Available in Pro', $text_domain ); ?>
+                        </div>
+
+                        <div class="lktags-readiness-list">
+                            <?php
+                            $locked_checks = array(
+                                array(
+                                    'label'  => __( 'Partner ID', $text_domain ),
+                                    'detail' => __( 'Check whether a usable numeric LinkedIn Partner ID is saved.', $text_domain ),
+                                ),
+                                array(
+                                    'label'  => __( 'Base Insight Tag', $text_domain ),
+                                    'detail' => __( 'Confirm whether the base Insight Tag can run from WordPress.', $text_domain ),
+                                ),
+                                array(
+                                    'label'  => __( 'WooCommerce coverage', $text_domain ),
+                                    'detail' => __( 'See whether product, cart, and checkout pages are covered.', $text_domain ),
+                                ),
+                                array(
+                                    'label'  => __( 'Custom conversion events', $text_domain ),
+                                    'detail' => __( 'Track which posts, pages, or products use a custom LinkedIn event code.', $text_domain ),
+                                ),
+                                array(
+                                    'label'  => __( 'Site visibility', $text_domain ),
+                                    'detail' => __( 'Check whether WordPress is configured for public search visibility.', $text_domain ),
+                                ),
+                            );
+                            foreach ( $locked_checks as $item ) {
+                            ?>
+                                <div class="lktags-readiness-item lktags-readiness-info lktags-readiness-disabled">
+                                    <div class="lktags-readiness-head">
+                                        <strong><?php echo esc_html( $item['label'] ); ?></strong>
+                                        <span><?php echo esc_html__( 'Pro', $text_domain ); ?></span>
+                                    </div>
+                                    <p><?php echo esc_html( $item['detail'] ); ?></p>
+                                </div>
+                            <?php } ?>
+                        </div>
+
+                        <p class="lktags-readiness-actions">
+                            <a href="<?php echo esc_url( admin_url( 'options-general.php?page=lktags-pricing' ) ); ?>"><?php echo esc_html__( 'View Pro options', $text_domain ); ?></a>
+                        </p>
+
+                    </div>
+
                     <div class="lktags-segment">
 
                         <h2><?php 
-echo esc_html__( 'LINKEDIN INSIGHT TAG ON WOOCOMMERCE', $text_domain );
+echo esc_html__( 'WooCommerce page coverage and conversions', $text_domain );
 ?></h2>
                         
                         <div class="lktags-row">
 
                             <div class="lktags-column col-4">
                                 <span class="lktags-label"><?php 
-echo esc_html__( 'Enable Linkedin Insight Tag on your store', $text_domain );
+echo esc_html__( 'Cover WooCommerce pages', $text_domain );
 ?></span>
                             </div>
 
@@ -129,7 +181,7 @@ echo esc_html__( 'Enable Linkedin Insight Tag on your store', $text_domain );
                                     <div class="lktags-tooltip">
                                         <span class="dashicons dashicons-editor-help"></span>
                                         <span class="lktags-tooltiptext"><?php 
-echo sprintf( wp_kses( __( 'This feature will add a "addtocart" event on your <a href="%s" target="_blank">CART PAGE</a>, just after your base code', $text_domain ), array(
+echo sprintf( wp_kses( __( 'Premium can add the base tag to WooCommerce pages and fire LinkedIn conversion IDs created in Campaign Manager.', $text_domain ), array(
     'a' => array(
         'href'   => array(),
         'target' => array(),
@@ -141,7 +193,7 @@ echo sprintf( wp_kses( __( 'This feature will add a "addtocart" event on your <a
                                     <div class="lktags-alert lktags-info">
                                         <span class="closebtn">&times;</span> 
                                         <?php 
-echo $get_pro . " " . __( 'Lktags on Woocommerce product pages.', $text_domain );
+echo $get_pro . " " . __( 'WooCommerce product, cart, checkout, purchase confirmation, and LinkedIn conversion ID support.', $text_domain );
 ?>
                                     </div>
 
@@ -162,7 +214,7 @@ echo $get_pro . " " . __( 'Lktags on Woocommerce product pages.', $text_domain )
 ?>
 
                         <div class="lktags-alert lktags-info"><span class="closebtn">&times;</span><?php 
-echo $get_pro . sprintf( wp_kses( __( ' specific "Event pixels", which are managed with a &nbsp;<a href="%s" target="_blank">META BOX feature</a>', 'pctag' ), array(
+echo $get_pro . sprintf( wp_kses( __( ' specific "Event pixels", which are managed with a &nbsp;<a href="%s" target="_blank">META BOX feature</a>', $text_domain ), array(
     'a' => array(
         'href'   => array(),
         'target' => array(),
@@ -179,7 +231,7 @@ echo $get_pro . sprintf( wp_kses( __( ' specific "Event pixels", which are manag
 
                         <div class="lktags-column col-4">
                             <span class="lktags-label"><?php 
-echo __( 'Allow Linkedin from crawling your website', $text_domain );
+echo __( 'Check B2B crawler and AI readiness', $text_domain );
 ?></span>
                         </div>
                         
@@ -195,7 +247,7 @@ if ( $options::check( 'boost-robot' ) ) {
                         </label>
 
                             &nbsp; <span><?php 
-echo __( 'Optimize site\'s crawlability with an optimized robots.txt', $text_domain );
+echo __( 'Review robots.txt, sitemap, and AI crawler rules for your B2B site', $text_domain );
 ?></span>
                             
                             <div class="lktags-boost-robot" <?php 
@@ -207,7 +259,7 @@ if ( $options::check( 'boost-robot' ) ) {
 ?>>
 
                             <div class="lktags-alert lktags-success" style="margin-top: 10px;"><?php 
-echo sprintf( wp_kses( __( 'Optimize your <a href="%2s" target="_blank">robots.txt</a> for Linkedin crawlers (<a href="%s" target="_blank">HERE</a>)', $text_domain ), array(
+echo sprintf( wp_kses( __( 'Review your <a href="%1$s" target="_blank">B2B AI visibility guide</a>, or run the <a href="%2$s" target="_blank">free crawl audit</a>.', $text_domain ), array(
     'a' => array(
         'href'   => array(),
         'target' => array(),
@@ -216,7 +268,7 @@ echo sprintf( wp_kses( __( 'Optimize your <a href="%2s" target="_blank">robots.t
         'href'   => array(),
         'target' => array(),
     ),
-) ), esc_url( "https://wordpress.org/plugins/better-robots-txt/" ), esc_url( "https://wordpress.org/plugins/better-robots-txt/" ) );
+) ), esc_url( "https://better-robots.com/linkedin-b2b-ai-visibility/" ), esc_url( "https://better-robots.com/check" ) );
 ?>
                                 </div>
                             </div>
@@ -244,7 +296,7 @@ if ( $options::check( 'boost-alt' ) ) {
                         </label>
 
                             &nbsp; <span><?php 
-echo __( 'Boost your ranking with optimized Alt tags', $text_domain );
+echo __( 'Improve image alt text coverage', $text_domain );
 ?></span>
                             
                             <div class="lktags-boost-alt" <?php 
