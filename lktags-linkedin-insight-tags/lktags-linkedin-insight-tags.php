@@ -4,7 +4,7 @@
 * Plugin Name: Lktags - Linkedin Insight Tags
 * Description: Add the LinkedIn Insight Tag to WordPress without editing theme files. Paste your Partner ID, enable the tag, and keep your B2B tracking setup simple.
 * Author: Pagup
-* Version: 1.2.8
+* Version: 1.2.9
 * Requires at least: 4.1
 * Requires PHP: 5.6
 * Tested up to: 7.0

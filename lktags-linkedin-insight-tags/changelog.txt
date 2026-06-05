@@ -1,5 +1,16 @@
 Lktags - Linkedin Insight Tags changelog
 
+= 1.2.9 =
+* Updated the bundled Freemius SDK to version 2.13.1 for security and compatibility.
+* Improved LinkedIn Partner ID handling.
+* Improved frontend output escaping for the base LinkedIn Insight Tag.
+* Scoped admin assets to the plugin settings page only.
+* Removed unnecessary external font loading from the WordPress admin.
+* Removed legacy cross-promotion from the Freemius opt-in message.
+* Clarified Free versus Premium features.
+* Clarified WooCommerce coverage between Free and Premium.
+* Clarified Better Robots.txt and AI visibility messaging without making ranking or citation claims.
+
 = 1.2.8 =
 * Improve Partner ID handling when users paste a numeric ID or the full LinkedIn Insight Tag code.
 * Improve frontend output escaping for the base LinkedIn Insight Tag.
