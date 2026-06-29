@@ -1,5 +1,8 @@
 Lktags - Linkedin Insight Tags changelog
 
+= 1.2.10 =
+* Harden premium custom LinkedIn event code storage.
+
 = 1.2.9 =
 * Updated the bundled Freemius SDK to version 2.13.1 for security and compatibility.
 * Improved LinkedIn Partner ID handling.

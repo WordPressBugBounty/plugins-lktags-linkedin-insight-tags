@@ -4,7 +4,7 @@ Tags: linkedin insight tag, linkedin advertising, linkedin ads, linkedin tag, li
 Requires at least: 4.1
 Requires PHP: 5.6
 Tested up to: 7.0
-Stable tag: 1.2.9
+Stable tag: 1.2.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -227,6 +227,9 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 
 == Changelog ==
 
+= 1.2.10 =
+* Harden premium custom LinkedIn event code storage.
+
 = 1.2.9 =
 * Updated the bundled Freemius SDK to version 2.13.1 for security and compatibility.
 * Improved LinkedIn Partner ID handling.
@@ -244,6 +247,9 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 Older changelog entries are kept in `changelog.txt`.
 
 == Upgrade Notice ==
+
+= 1.2.10 =
+Hardens premium custom LinkedIn event code storage.
 
 = 1.2.9 =
 Improves Partner ID handling, admin hygiene, setup guidance, and Free/Premium positioning. Premium users also get local Tag Health and B2B Readiness checks plus WooCommerce conversion ID fields.

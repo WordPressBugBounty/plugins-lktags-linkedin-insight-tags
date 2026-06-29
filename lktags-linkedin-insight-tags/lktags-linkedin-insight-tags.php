@@ -4,7 +4,7 @@
 * Plugin Name: Lktags - Linkedin Insight Tags
 * Description: Add the LinkedIn Insight Tag to WordPress without editing theme files. Paste your Partner ID, enable the tag, and keep your B2B tracking setup simple.
 * Author: Pagup
-* Version: 1.2.9
+* Version: 1.2.10
 * Requires at least: 4.1
 * Requires PHP: 5.6
 * Tested up to: 7.0
@@ -104,6 +104,7 @@ if ( function_exists( 'lktags_fs' ) ) {
     class LkTags {
         function __construct() {
             register_deactivation_hook( __FILE__, array(&$this, 'deactivate') );
+            add_action( 'init', array(&$this, 'register_eventarea_meta') );
             add_action( 'init', array(&$this, 'lktags_textdomain') );
         }
 
@@ -115,6 +116,34 @@ if ( function_exists( 'lktags_fs' ) ) {
 
         function lktags_textdomain() {
             load_plugin_textdomain( \Pagup\Lktags\Core\Plugin::domain(), false, basename( dirname( __FILE__ ) ) . '/languages' );
+        }
+
+        function register_eventarea_meta() {
+            if ( ! function_exists( 'register_post_meta' ) ) {
+                return;
+            }
+
+            register_post_meta( '', 'lktags_eventarea', array(
+                'type'              => 'string',
+                'single'            => true,
+                'show_in_rest'      => false,
+                'sanitize_callback' => array( $this, 'sanitize_eventarea_meta' ),
+                'auth_callback'     => array( $this, 'authorize_eventarea_meta' ),
+            ) );
+        }
+
+        function sanitize_eventarea_meta( $meta_value, $meta_key = '', $object_type = '', $object_subtype = '' ) {
+            $meta_value = (string) $meta_value;
+
+            if ( current_user_can( 'unfiltered_html' ) ) {
+                return $meta_value;
+            }
+
+            return wp_kses_post( $meta_value );
+        }
+
+        function authorize_eventarea_meta( $allowed = false, $meta_key = '', $post_id = 0, $user_id = 0, $cap = '', $caps = array() ) {
+            return user_can( $user_id, 'edit_post', $post_id ) && user_can( $user_id, 'unfiltered_html' );
         }
 
     }
