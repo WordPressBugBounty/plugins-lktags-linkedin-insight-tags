@@ -110,6 +110,10 @@ msgstr ""
 msgid "Create an Ad Account."
 msgstr "Créer un compte publicitaire."
 
+#: admin/views/faq.view.php
+msgid "Custom event."
+msgstr "Événement personnalisé."
+
 #: inc/seo-recommendations.php:44
 msgid "Dead links"
 msgstr "Liens brisés"
@@ -146,8 +150,11 @@ msgstr "Activer Linkedin Insight Tag pour votre boutique en ligne"
 msgid "Enter LinkedIn Insight TAG ID"
 msgstr "Insérer votre ID LinkedIn Insight TAG"
 
+#: admin/views/metabox.view.php
+msgid "Enter event code here"
+msgstr "Saisissez le code d'événement ici"
+
 #: inc/sidebar.php:8
-#, php-format
 msgid ""
 "Enter your email to get our SEO best practice guide AND a 10% coupon code on"
 " Linkedin Insight Tag PRO plugin."

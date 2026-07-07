@@ -84,6 +84,10 @@ msgstr "Haz clic <a href=\"%s\" target=\"_blank\">AQUÍ</a> para instalar el <a 
 msgid "Create an Ad Account."
 msgstr "Crear una Cuenda de Anuncios."
 
+#: admin/views/faq.view.php
+msgid "Custom event."
+msgstr "Evento personalizado."
+
 #: inc/seo-recommendations.php:44
 msgid "Dead links"
 msgstr "Enlaces muertos"
@@ -116,10 +120,13 @@ msgstr "Habilitar Linkedin Insight Tag en tu tienda"
 msgid "Enter LinkedIn Insight TAG ID"
 msgstr "Escribe el ID de TAG de LinkedIn Insight"
 
+#: admin/views/metabox.view.php
+msgid "Enter event code here"
+msgstr "Introduce aquí el código del evento"
+
 #: inc/sidebar.php:8
-#, php-format
 msgid "Enter your email to get our SEO best practice guide AND a 10% coupon code on Linkedin Insight Tag PRO plugin."
-msgstr "Escribe tu correo electrónico para obtener nuestra guía de buenas prácticas SEO y un código de cupón del 10% en BIALTY para el complemento Woocommerce."
+msgstr "Escribe tu correo electrónico para recibir nuestra guía de buenas prácticas SEO y un código de cupón de 10 % para el plugin LinkedIn Insight Tag PRO."
 
 #: inc/faq.php:50
 msgid "First, head to the LinkedIn Marketing Solutions page. From the “Advertising” dropdown menu, we’ll want to select “Sign in to Campaign Manager.” If you don’t have a LinkedIn business account, then sign up for one now. Once that’s complete, head into the Campaign Manager!"

@@ -29,7 +29,7 @@
                 <li><?php echo esc_html__( 'Lead.', $text_domain ); ?></li>
                 <li><?php echo esc_html__( 'Purchase.', $text_domain ); ?></li>
                 <li><?php echo esc_html__( 'Sign up.', $text_domain ); ?></li>
-                <li><?php echo esc_html__( 'Custom event.' ); ?></li>
+                <li><?php echo esc_html__( 'Custom event.', $text_domain ); ?></li>
             </ul>
 
             <p>

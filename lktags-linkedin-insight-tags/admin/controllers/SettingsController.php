@@ -96,7 +96,7 @@ class SettingsController {
             ];
             update_option( 'lktags', $options );
             // update options
-            echo '<div class="notice lktags-notice notice-success is-dismissible"><p><strong>' . esc_html__( 'Settings saved.' ) . '</strong></p></div>';
+            echo '<div class="notice lktags-notice notice-success is-dismissible"><p><strong>' . esc_html__( 'Settings saved.', 'lktags-linkedin-insight-tags' ) . '</strong></p></div>';
             if ( '' !== $this->partner_id_error ) {
                 echo '<div class="notice lktags-notice notice-warning is-dismissible"><p><strong>' . esc_html( $this->partner_id_error ) . '</strong></p></div>';
             }

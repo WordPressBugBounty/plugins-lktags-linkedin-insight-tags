@@ -14,7 +14,7 @@
 
         </div>
 
-        <textarea name="lktags_eventarea" rows="3" class="lktags-area" placeholder="<?php echo __('Enter event event code here'); ?>" id="lktags_eventarea"><?php if (!empty($lktags_eventarea)) { echo $lktags_eventarea; } ?></textarea>
+        <textarea name="lktags_eventarea" rows="3" class="lktags-area" placeholder="<?php echo esc_attr__( 'Enter event code here', 'lktags-linkedin-insight-tags' ); ?>" id="lktags_eventarea"><?php if (!empty($lktags_eventarea)) { echo esc_textarea( $lktags_eventarea ); } ?></textarea>
 
     </div>
 

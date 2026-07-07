@@ -4,7 +4,7 @@ Tags: linkedin insight tag, linkedin advertising, linkedin ads, linkedin tag, li
 Requires at least: 4.1
 Requires PHP: 5.6
 Tested up to: 7.0
-Stable tag: 1.2.10
+Stable tag: 1.2.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -227,6 +227,12 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 
 == Changelog ==
 
+= 1.2.11 =
+* Refresh gettext catalogs and compiled translation files.
+* Fix missing admin text domains for translated settings notices, FAQ labels, and metabox strings.
+* Correct the Spanish coupon message so it refers to LinkedIn Insight Tag PRO.
+* Harden the free custom event metabox output escaping.
+
 = 1.2.10 =
 * Harden premium custom LinkedIn event code storage.
 
@@ -247,6 +253,9 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 Older changelog entries are kept in `changelog.txt`.
 
 == Upgrade Notice ==
+
+= 1.2.11 =
+Refreshes translations and improves admin text domain coverage for plugin settings and event metabox strings.
 
 = 1.2.10 =
 Hardens premium custom LinkedIn event code storage.

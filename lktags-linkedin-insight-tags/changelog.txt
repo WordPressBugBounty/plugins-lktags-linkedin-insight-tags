@@ -1,5 +1,11 @@
 Lktags - Linkedin Insight Tags changelog
 
+= 1.2.11 =
+* Refresh gettext catalogs and compiled translation files.
+* Fix missing admin text domains for translated settings notices, FAQ labels, and metabox strings.
+* Correct the Spanish coupon message so it refers to LinkedIn Insight Tag PRO.
+* Harden the free custom event metabox output escaping.
+
 = 1.2.10 =
 * Harden premium custom LinkedIn event code storage.
 
