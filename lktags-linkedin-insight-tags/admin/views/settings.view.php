@@ -516,6 +516,11 @@ echo __( "Note: once the codes are added, make sure to clear your cache. Then, y
     
             </div>
             <!-- end lktags-main -->
+
+            <?php
+Pagup\Lktags\Core\Plugin::view( 'inc/agent-control' );
+?>
+
         </div>
         <!-- end main settings lktags-column col-8 -->
 

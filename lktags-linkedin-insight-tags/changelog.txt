@@ -1,5 +1,11 @@
 Lktags - Linkedin Insight Tags changelog
 
+= 1.2.12 =
+* Added a PAGUP Agent Control panel with three read-only and draft-only task examples for AI agents.
+* Updated the bundled Freemius WordPress SDK from 2.13.1 to 2.13.4.
+* Completed the five shipped locale catalogs, including thirteen interface strings that were left untranslated.
+* Fixed the settings screen on small screens, where a fixed-width tooltip forced the whole page to shrink and made labels overlap their descriptions.
+
 = 1.2.11 =
 * Refresh gettext catalogs and compiled translation files.
 * Fix missing admin text domains for translated settings notices, FAQ labels, and metabox strings.

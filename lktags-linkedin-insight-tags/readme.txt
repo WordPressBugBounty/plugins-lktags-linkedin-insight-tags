@@ -4,7 +4,7 @@ Tags: linkedin insight tag, linkedin advertising, linkedin ads, linkedin tag, li
 Requires at least: 4.1
 Requires PHP: 5.6
 Tested up to: 7.0
-Stable tag: 1.2.11
+Stable tag: 1.2.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -225,7 +225,20 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 4. Premium Tag Health and B2B Readiness panel.
 5. Premium WooCommerce conversion ID fields and custom event options.
 
+= Part of the Pagup ecosystem =
+
+* [PAGUP Agent Control](https://wpagentcontrol.com/) - Give AI agents a dedicated WordPress access layer with explicit permissions.
+* [pagup.com](https://pagup.com/) - Digital readability firm. Diagnostic, semantic architecture, AI governance.
+* [gautierdorval.com](https://gautierdorval.com/) - Doctrine, canonical definitions, interpretive governance research.
+* [interpretive-governance.org](https://interpretive-governance.org/) - Formal versioned standard for interpretive governance.
+
 == Changelog ==
+
+= 1.2.12 =
+* Added a PAGUP Agent Control panel with three read-only and draft-only task examples for AI agents.
+* Updated the bundled Freemius WordPress SDK from 2.13.1 to 2.13.4.
+* Completed the five shipped locale catalogs, including thirteen interface strings that were left untranslated.
+* Fixed the settings screen on small screens, where a fixed-width tooltip forced the whole page to shrink and made labels overlap their descriptions.
 
 = 1.2.11 =
 * Refresh gettext catalogs and compiled translation files.
@@ -253,6 +266,9 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 Older changelog entries are kept in `changelog.txt`.
 
 == Upgrade Notice ==
+
+= 1.2.12 =
+Adds an Agent Control panel for AI agent tasks, refreshes the bundled Freemius SDK to 2.13.4, and completes the translation catalogs. Tracking behaviour is unchanged.
 
 = 1.2.11 =
 Refreshes translations and improves admin text domain coverage for plugin settings and event metabox strings.
