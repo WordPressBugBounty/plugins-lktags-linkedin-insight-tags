@@ -3,8 +3,8 @@ Contributors: the-rock, pagup, freemius
 Tags: linkedin insight tag, linkedin advertising, linkedin ads, linkedin tag, linkedin conversion tracking
 Requires at least: 4.1
 Requires PHP: 5.6
-Tested up to: 7.0
-Stable tag: 1.2.12
+Tested up to: 7.1
+Stable tag: 1.2.13
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -233,6 +233,15 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 * [interpretive-governance.org](https://interpretive-governance.org/) - Formal versioned standard for interpretive governance.
 
 == Changelog ==
+
+= 1.2.13 =
+* Hardened the bundled Freemius SDK after the WordPress.org automated security review.
+* Turned on TLS certificate verification for Freemius API calls, pinned the API transport to HTTPS whatever the local cURL version, and removed every fallback that replayed a failed HTTPS request over plain HTTP.
+* Sent the plugin and translation update checks to WordPress.org over HTTPS, instead of starting in plain HTTP and upgrading only when the site reported TLS support.
+* Verified the certificate on the clone resolution request, which carries the signed-in administrator's cookies.
+* Called the WordPress admin menu and base64 functions by their real names instead of rebuilding those names from string fragments.
+* Filtered remote add-on readme HTML through KSES before the plugin information dialogue displays it.
+* Required a site management capability, not only a nonce, before a clone resolution can change the install or licence state, and validated the target site identifier before anything reads it.
 
 = 1.2.12 =
 * Added a PAGUP Agent Control panel with three read-only and draft-only task examples for AI agents.

@@ -1,5 +1,14 @@
 Lktags - Linkedin Insight Tags changelog
 
+= 1.2.13 =
+* Hardened the bundled Freemius SDK after the WordPress.org automated security review.
+* Turned on TLS certificate verification for Freemius API calls, pinned the API transport to HTTPS whatever the local cURL version, and removed every fallback that replayed a failed HTTPS request over plain HTTP.
+* Sent the plugin and translation update checks to WordPress.org over HTTPS, instead of starting in plain HTTP and upgrading only when the site reported TLS support.
+* Verified the certificate on the clone resolution request, which carries the signed-in administrator's cookies.
+* Called the WordPress admin menu and base64 functions by their real names instead of rebuilding those names from string fragments.
+* Filtered remote add-on readme HTML through KSES before the plugin information dialogue displays it.
+* Required a site management capability, not only a nonce, before a clone resolution can change the install or licence state, and validated the target site identifier before anything reads it.
+
 = 1.2.12 =
 * Added a PAGUP Agent Control panel with three read-only and draft-only task examples for AI agents.
 * Updated the bundled Freemius WordPress SDK from 2.13.1 to 2.13.4.

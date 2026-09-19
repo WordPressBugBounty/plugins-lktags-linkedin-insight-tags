@@ -4,16 +4,29 @@
 * Plugin Name: Lktags - Linkedin Insight Tags
 * Description: Add the LinkedIn Insight Tag to WordPress without editing theme files. Paste your Partner ID, enable the tag, and keep your B2B tracking setup simple.
 * Author: Pagup
-* Version: 1.2.12
+* Version: 1.2.13
 * Requires at least: 4.1
 * Requires PHP: 5.6
-* Tested up to: 7.0
+* Tested up to: 7.1
 * Author URI: https://pagup.com/
 * Text Domain: lktags-linkedin-insight-tags
 * Domain Path: /languages/
 */
 if ( !defined( 'ABSPATH' ) ) {
     exit;
+}
+/*
+ * Pagup hardening (WordPress.org automated security review).
+ *
+ * Freemius loads the newest SDK copy found across every active plugin, which may be a
+ * copy Pagup has not hardened. Defining the constant here, before any SDK file is read,
+ * keeps TLS certificate verification on for the Freemius API whichever copy wins the
+ * race. A site that really must opt out can still define it in wp-config.php.
+ *
+ * See scripts/harden-freemius-sdk.php for the full patch set.
+ */
+if ( !defined( 'FS_SDK__SSLVERIFY' ) ) {
+    define( 'FS_SDK__SSLVERIFY', true );
 }
 /******************************************
                 Freemius Init
@@ -28,7 +41,7 @@ if ( function_exists( 'lktags_fs' ) ) {
         if ( !defined( 'LKTAGS_PLUGIN_DIR' ) ) {
             define( 'LKTAGS_PLUGIN_DIR', plugins_url( '', __FILE__ ) );
         }
-        require 'vendor/autoload.php';
+        require_once __DIR__ . '/vendor/autoload.php';
         // Create a helper function for easy SDK access.
         function lktags_fs() {
             global $lktags_fs;
