@@ -1,5 +1,8 @@
 Lktags - Linkedin Insight Tags changelog
 
+= 1.2.14 =
+* Updated Freemius SDK to the latest version
+
 = 1.2.13 =
 * Hardened the bundled Freemius SDK after the WordPress.org automated security review.
 * Turned on TLS certificate verification for Freemius API calls, pinned the API transport to HTTPS whatever the local cURL version, and removed every fallback that replayed a failed HTTPS request over plain HTTP.

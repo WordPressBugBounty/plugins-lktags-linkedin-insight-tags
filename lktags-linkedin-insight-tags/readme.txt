@@ -4,7 +4,7 @@ Tags: linkedin insight tag, linkedin advertising, linkedin ads, linkedin tag, li
 Requires at least: 4.1
 Requires PHP: 5.6
 Tested up to: 7.1
-Stable tag: 1.2.13
+Stable tag: 1.2.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -233,6 +233,9 @@ This plugin installs the LinkedIn Insight Tag. AI visibility and crawler governa
 * [interpretive-governance.org](https://interpretive-governance.org/) - Formal versioned standard for interpretive governance.
 
 == Changelog ==
+
+= 1.2.14 =
+* Updated Freemius SDK to the latest version
 
 = 1.2.13 =
 * Hardened the bundled Freemius SDK after the WordPress.org automated security review.
